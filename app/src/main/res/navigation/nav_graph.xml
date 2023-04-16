@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/RegistrarVentaFragment">
+
+    <fragment
+        android:id="@+id/RegistrarVentaFragment"
+        android:name="com.smq.puntoventa.ui.registrar_venta.RegistrarVentaFragment"
+        android:label="Registrar venta"
+        tools:layout="@layout/fragment_registrar_venta">
+
+        <action
+            android:id="@+id/action_RegistrarVentas_to_Ventas"
+            app:destination="@id/VentasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/VentasFragment"
+        android:name="com.smq.puntoventa.ui.ventas.VentasFragment"
+        android:label="Ventas"
+        tools:layout="@layout/fragment_ventas">
+
+        <action
+            android:id="@+id/action_Ventas_to_RegistrarVentas"
+            app:destination="@id/RegistrarVentaFragment" />
+    </fragment>
+</navigation>
